@@ -34,3 +34,13 @@
 .course-img {
   width: inherit;
 }
+
+.pers-rate {
+  color: goldenrod;
+  padding: 1px;
+}
+.pers-rate-num {
+  padding: 1px;
+  color: brown;
+  font-weight: bold;
+}
