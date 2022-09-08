@@ -1,13 +1,16 @@
 import React from "react";
 import Card from "./Card";
-function Content(props) {
-  console.log(props.field.courses[0]);
-  const view = props.field.courses.map((x) => <Card course={x}></Card>);
-  console.log(view);
+import { useContext } from "react";
+import { DataContext } from "../App";
+
+function Content() {
+  const data = useContext(DataContext);
+  const courseList = data[0];
+  const view = courseList.courses.map((x) => <Card course={x}></Card>);
   return (
     <div className="container">
-      <h2>{props.field.title}</h2>
-      <p>{props.field.description}</p>
+      <h2>{courseList.title}</h2>
+      <p>{courseList.description}</p>
       <div className="view">{view}</div>
     </div>
   );

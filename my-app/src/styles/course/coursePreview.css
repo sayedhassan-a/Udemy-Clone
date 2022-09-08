@@ -1,0 +1,44 @@
+.container,
+img {
+  font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
+    Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  color: #1c1d1f;
+  margin: 0;
+  width: 338px;
+  border: black solid;
+  align-items: center;
+  text-align: left;
+}
+.price {
+  font-size: 32px;
+}
+.originalPrice {
+  color: RGB(106, 111, 115);
+  font-size: 16px;
+  font-weight: 400;
+}
+.discount {
+  font-size: 16px;
+  font-weight: 400;
+}
+button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 6px;
+}
+
+.addToCart {
+  background-color: RGB(135, 16, 216);
+  color: white;
+  border: RGB(135, 16, 216) solid 1px;
+}
+.Buy {
+  background-color: white;
+  border: black solid 1px;
+  color: black;
+}
