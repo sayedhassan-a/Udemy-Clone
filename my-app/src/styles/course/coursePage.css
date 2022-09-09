@@ -1,0 +1,17 @@
+.coursePage {
+  height: 600vh;
+  max-width: 108.4rem;
+}
+.headerBackground {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: black;
+  position: absolute;
+  height: 400px;
+  z-index: -1;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 3rem;
+}

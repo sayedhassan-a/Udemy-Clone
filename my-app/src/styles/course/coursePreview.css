@@ -7,14 +7,35 @@ img {
   line-height: 1.4;
   font-size: 1.6rem;
   color: #1c1d1f;
-  margin: 0;
-  width: 338px;
-  border: black solid;
-  align-items: center;
+  width: 344px;
   text-align: left;
+  padding: 0;
+}
+
+.previewContainer {
+  margin: 0 70px 0 0;
+  border: ghostwhite solid;
+  background-color: white;
+  display: none;
+}
+.preview {
+  padding: 20px 18px;
+  width: 344px;
+}
+.preview2 {
+  padding: 20px 18px;
+  width: 344px;
+  box-shadow: 0px 0px 1px 1px gray;
+  position: sticky;
+  right: 5px;
+  top: 0;
+  background-color: white;
+  display: none;
 }
 .price {
   font-size: 32px;
+  vertical-align: middle;
+  margin: 20px 0;
 }
 .originalPrice {
   color: RGB(106, 111, 115);
@@ -30,15 +51,53 @@ button {
   font-size: 16px;
   font-weight: 700;
   padding: 6px 6px;
+  margin: 3px auto;
 }
-
+span,
+div {
+  margin: 10px auto;
+}
 .addToCart {
   background-color: RGB(135, 16, 216);
   color: white;
   border: RGB(135, 16, 216) solid 1px;
 }
-.Buy {
+.Buy,
+.business button {
   background-color: white;
   border: black solid 1px;
   color: black;
+}
+
+i {
+  width: 14px;
+  max-height: 10px;
+  align-self: left;
+  justify-self: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+svg {
+  width: 10px;
+  padding-right: 4px;
+  box-sizing: content-box;
+}
+
+.share {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  margin: auto;
+  text-underline-offset: 3px;
+}
+.share span {
+  padding: 12px;
+}
+.business h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+.business p {
+  font-size: 14px;
+  font-weight: 400;
 }

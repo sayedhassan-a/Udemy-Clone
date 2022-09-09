@@ -1,9 +1,14 @@
-.header {
+.courseHeader {
   background-color: black;
   font-size: 14px;
   font-weight: 400;
   color: white;
+  max-width: 80rem;
+  margin-left: 0;
+  margin-top: 0;
+  height: 390px;
 }
+
 .pers-rate-num,
 .pers-rate {
   color: RGB(243, 202, 140);

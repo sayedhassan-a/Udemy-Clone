@@ -75,6 +75,7 @@ form {
   border: solid black 1px;
   vertical-align: middle;
   padding: 5px;
+  width: 35px;
 }
 .pers-last {
   display: flex;

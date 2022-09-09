@@ -1,9 +1,9 @@
 import React from "react";
 
 function Rating(props) {
-  const { rating } = props;
-  console.log(rating);
+  const { include, rating } = props;
   let x = parseFloat(rating);
+  const val = x;
   x = x.toFixed(1);
   const rate = () => {
     if (x > 0.5) {
@@ -14,12 +14,12 @@ function Rating(props) {
       return "fa fa-star-half-empty pers-rate";
     } else {
       x--;
-      return "fa fa-star";
+      return "fa fa-star-o pers-rate";
     }
   };
   return (
     <React.Fragment>
-      <span className="pers-rate-num">{x}&nbsp;</span>
+      {include && <span className="pers-rate-num">{val}&nbsp;</span>}
       <span className={rate()}>&nbsp;</span>
       <span className={rate()}>&nbsp;</span>
       <span className={rate()}>&nbsp;</span>

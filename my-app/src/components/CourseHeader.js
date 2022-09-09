@@ -8,11 +8,11 @@ function CourseHeader(courseIndex) {
   const courseDetails = data[1].courses[0];
   return (
     <React.Fragment>
-      <div className="header">
+      <div className="courseHeader">
         <p className="path">{courseDetails.topic}</p>
         <h1 className="heading">{courseDetails.title}</h1>
         <div className="intro">{courseDetails.Introduction}</div>
-        <Rating rating={courseDetails.rate}></Rating>
+        <Rating include={true} rating={courseDetails.rate}></Rating>
         <div>
           <span className="ratingCount">
             ({courseDetails.ratingCount} ratings)&nbsp;

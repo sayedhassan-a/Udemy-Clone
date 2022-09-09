@@ -7,7 +7,7 @@ function Card(props) {
       <img src={props.course.image} className="course-img"></img>
       <h3 className="course-title">{props.course.title}</h3>
       <p className="author">{props.course.instructors[0].name}</p>
-      <Rating rating={props.course.rating}></Rating>
+      <Rating inclued={1} rating={props.course.rating}></Rating>
 
       <p className="price">{props.course.price}</p>
     </div>
