@@ -9,11 +9,13 @@ import Overview from "./course/Overview";
 import Lecture from "./course/Lecture";
 import LecturesList from "./course/LecturesList";
 import Review from "./Review";
+import { useSearchParams } from "react-router-dom";
 
-function CourseDetails(props) {
-  const { index } = props;
+function CourseDetails() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const index = searchParams.get("filter");
   const data = useContext(DataContext);
-  const course = data[1].courses;
+  const course = data.courses;
   console.log();
   return (
     <React.Fragment>

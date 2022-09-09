@@ -5,7 +5,6 @@ import Nav from "./Nav";
 function Home() {
   return (
     <React.Fragment>
-      <Nav></Nav>
       <Header></Header>
       <Content></Content>
     </React.Fragment>

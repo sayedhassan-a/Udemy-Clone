@@ -5,7 +5,7 @@ import styles from "../styles/course/courseHeader.css";
 import Rating from "./Rating";
 function CourseHeader(courseIndex) {
   const data = useContext(DataContext);
-  const courseDetails = data[1].courses[0];
+  const courseDetails = data.courses[0];
   return (
     <React.Fragment>
       <div className="courseHeader">

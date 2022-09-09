@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import logoBlack from "../files/logo-udemy-black.svg";
 import styles from "../styles/nav.css";
+import { useRef } from "react";
+import {
+  createSearchParams,
+  Navigate,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 function Nav() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const searcRef = useRef();
+  const [searchStr, setSearchStr] = useState();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(searchStr);
+
+    navigate("/", { search: "?filter=true" });
+    console.log(searchParams.get("filter"));
+  };
   return (
     <nav class="pers-nav">
       <span class="fa fa-bars" id="bar"></span>
       <span class="pers-navitem pers-site">
-        <img src={logoBlack} alt="logo" id="logo" />
+        <a href="/">
+          <img src={logoBlack} alt="logo" id="logo" />
+        </a>
       </span>
       <span class="pers-navitem pers-cat">Categories</span>
 
-      <form class="pers-navitem pers-form" onsubmit="{upd()}">
+      <form class="pers-navitem pers-form" onSubmit={handleSubmit}>
         <button type="submit" class="pers-sbutton">
           <i class="material-icons">search</i>
         </button>
@@ -19,6 +40,8 @@ function Nav() {
           class="pers-bar"
           placeholder="Search for anything"
           id="search-item"
+          value={searchStr}
+          onChange={(e) => setSearchStr(e.target.value)}
         />
       </form>
 

@@ -3,7 +3,7 @@ header {
   width: fit-content;
   max-width: 100%;
 }
-.rate .pers-header,
+.pers-header,
 .pers-header2 {
   position: absolute;
   width: 350px;
@@ -15,6 +15,16 @@ header {
   padding: 4px 20px;
   box-shadow: 1px 1px 2px 2px gainsboro;
 }
+.pers-alarm {
+  display: inline-block;
+  margin: auto;
+  margin-top: 3px;
+  width: 100%;
+}
+.pers-alarm img {
+  width: 100%;
+}
+
 .pers-header2 {
   width: 80%;
   margin: auto;
@@ -40,8 +50,5 @@ img {
   .pers-header2 {
     display: block;
     margin-bottom: 20px;
-  }
-  .carousel-item > article:nth-child(4) {
-    display: none;
   }
 }

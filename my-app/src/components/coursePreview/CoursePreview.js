@@ -3,8 +3,8 @@ import { useContext } from "react";
 import { DataContext } from "../../App";
 import styles from "../../styles/course/coursePreview.css";
 function CoursePreview() {
-  const data = useContext(DataContext);
-  const course = data[1].courses[0];
+  const [data, ready] = useContext(DataContext);
+  const course = data.courses[0];
   return (
     <React.Fragment>
       <div className="previewContainer stick">
