@@ -1,17 +1,25 @@
 .coursePage {
   height: 600vh;
-  max-width: 108.4rem;
+  padding: auto;
+}
+.coursePage :not(.headerBackground) {
+  max-width: 80rem;
 }
 .headerBackground {
-  margin-top: 0;
-  margin-bottom: 0;
+  width: 100% !important;
   background-color: black;
-  position: absolute;
-  height: 400px;
-  z-index: -1;
-  width: 100%;
 }
 
 .section {
   margin-bottom: 3rem;
+}
+
+.overviewBody,
+.reviewBody,
+.instructorBody,
+.overviewOuter,
+.lectureBody {
+  padding: 30px !important;
+  box-sizing: border-box;
+  max-width: "80rem";
 }

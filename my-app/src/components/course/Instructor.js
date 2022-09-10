@@ -4,7 +4,7 @@ function Instructor(props) {
   const { instructor } = props;
   console.log(props);
   return (
-    <div className="instructor">
+    <div className="instructor" style={{ width: "100%" }}>
       <div className="name">
         <u>{instructor.name}</u>
       </div>

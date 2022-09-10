@@ -1,5 +1,4 @@
-.container,
-img {
+.previewImg {
   font-family: udemy sans, sf pro text, -apple-system, BlinkMacSystemFont,
     Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
     segoe ui emoji, segoe ui symbol;
@@ -8,21 +7,24 @@ img {
   font-size: 1.6rem;
   color: #1c1d1f;
   width: 344px;
-  text-align: left;
+  position: static;
+  height: fit-content;
   padding: 0;
 }
 
-.previewContainer {
-  margin: 0 70px 0 0;
-  border: ghostwhite solid;
-  background-color: white;
-  display: none;
-}
-.preview {
+.previewBody {
+  z-index: 9;
   padding: 20px 18px;
   width: 344px;
+  box-shadow: 0px 0px 1px 1px gray;
+  background-color: white;
+  position: sticky;
+  align-items: flex-start;
+  height: fit-content;
+  top: 5px;
 }
 .preview2 {
+  z-index: 9;
   padding: 20px 18px;
   width: 344px;
   box-shadow: 0px 0px 1px 1px gray;
@@ -30,14 +32,14 @@ img {
   right: 5px;
   top: 0;
   background-color: white;
-  display: none;
 }
-.price {
+.previewPrice {
   font-size: 32px;
   vertical-align: middle;
   margin: 20px 0;
+  font-weight: 700;
 }
-.originalPrice {
+.originalPreviewPrice {
   color: RGB(106, 111, 115);
   font-size: 16px;
   font-weight: 400;
@@ -46,12 +48,14 @@ img {
   font-size: 16px;
   font-weight: 400;
 }
-button {
-  width: 100%;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 6px 6px;
-  margin: 3px auto;
+.buy,
+.addToCart,
+.business-btn {
+  width: 100% !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  padding: 6px 6px !important;
+  margin: 3px auto !important;
 }
 span,
 div {
@@ -62,11 +66,11 @@ div {
   color: white;
   border: RGB(135, 16, 216) solid 1px;
 }
-.Buy,
-.business button {
-  background-color: white;
-  border: black solid 1px;
-  color: black;
+.buy,
+.business-btn {
+  background-color: white !important;
+  border: black solid 1px !important;
+  color: black !important;
 }
 
 i {
@@ -100,4 +104,14 @@ svg {
 .business p {
   font-size: 14px;
   font-weight: 400;
+}
+
+.include {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .previewToHide {
+    display: none;
+  }
 }

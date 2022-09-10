@@ -12,27 +12,36 @@ import Review from "./Review";
 import { useSearchParams } from "react-router-dom";
 
 function CourseDetails() {
+  const [data, filtered] = useContext(DataContext);
+  console.log(data?.courses);
   const [searchParams, setSearchParams] = useSearchParams();
-  const index = searchParams.get("filter");
-  const data = useContext(DataContext);
-  const course = data.courses;
-  console.log();
+  const id = searchParams.get("filter");
+  const course = data?.courses[id];
   return (
     <React.Fragment>
-      <CoursePreview className="pre"></CoursePreview>
-      <div className="headerBackground"></div>
-      <div className="coursePage">
-        <CourseHeader></CourseHeader>
-        <Overview goalsList={course[index].overview}></Overview>
-        <LecturesList index={index}></LecturesList>
-        <p className="sectionHeader">Instructors</p>
-        {course[index].instructor.map((element) => (
-          <Instructor instructor={element}></Instructor>
-        ))}
-        <p className="sectionHeader">Reviews</p>
-        {course[index].reviews.map((obj) => (
-          <Review review={obj}></Review>
-        ))}
+      <div className="d-flex">
+        <div className="coursePage">
+          <div className="headerBackground">
+            <CourseHeader courseIndex="id"></CourseHeader>
+          </div>
+          <Overview goalsList={course?.overview}></Overview>
+          <LecturesList data={data}></LecturesList>
+          <div className="instructorBody">
+            <p className="sectionHeader" style={{ width: "80%" }}>
+              Instructors
+            </p>
+            {course?.instructor.map((element) => (
+              <Instructor instructor={element}></Instructor>
+            ))}
+          </div>
+          <div className="reviewBody">
+            <p className="sectionHeader">Reviews</p>
+            {course?.reviews.map((obj) => (
+              <Review review={obj}></Review>
+            ))}
+          </div>
+        </div>
+        <CoursePreview className="pre"></CoursePreview>
       </div>
     </React.Fragment>
   );

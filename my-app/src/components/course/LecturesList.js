@@ -2,16 +2,15 @@ import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../../App";
 import Lecture from "./Lecture";
+import { useSearchParams } from "react-router-dom";
 function LecturesList(props) {
-  console.log(props);
-  const { index } = props;
-  const data = useContext(DataContext);
-  const course = data[1].courses;
-  console.log(course[index].content);
+  const { data } = props;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const index = searchParams.get("filter");
   return (
-    <div className="section">
+    <div className="lectureBody">
       <p className="sectionHeader">Course Content</p>
-      {course[index].content.map((obj) => (
+      {data?.courses[index]?.content?.map((obj) => (
         <Lecture lecture={obj}></Lecture>
       ))}
     </div>

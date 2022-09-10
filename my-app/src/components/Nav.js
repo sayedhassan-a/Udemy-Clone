@@ -8,18 +8,17 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-function Nav() {
+function Nav(props) {
+  const { handle } = props;
   const [searchParams, setSearchParams] = useSearchParams();
+  const [searchStr, setSearchStr] = useState();
   const navigate = useNavigate();
   const searcRef = useRef();
-  const [searchStr, setSearchStr] = useState();
-
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(searchStr);
-
-    navigate("/", { search: "?filter=true" });
-    console.log(searchParams.get("filter"));
+    handle(searcRef?.current.value);
+    navigate("/?filter=" + searcRef?.current.value);
   };
   return (
     <nav class="pers-nav">
@@ -41,6 +40,7 @@ function Nav() {
           placeholder="Search for anything"
           id="search-item"
           value={searchStr}
+          ref={searcRef}
           onChange={(e) => setSearchStr(e.target.value)}
         />
       </form>

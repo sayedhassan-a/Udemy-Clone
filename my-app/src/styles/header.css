@@ -11,7 +11,7 @@ header {
   margin-left: 10%;
   margin-top: 4%;
   background-color: white;
-
+  max-width: 100%;
   padding: 4px 20px;
   box-shadow: 1px 1px 2px 2px gainsboro;
 }
@@ -26,7 +26,6 @@ header {
 }
 
 .pers-header2 {
-  width: 80%;
   margin: auto;
   position: static;
   display: none;
@@ -43,6 +42,15 @@ header {
 img {
   max-width: 100%;
 }
+.smallPreview {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .smallPreview {
+    display: unset;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .pers-header {
     display: none;

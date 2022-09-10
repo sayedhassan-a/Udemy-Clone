@@ -1,8 +1,7 @@
 .instructor {
   width: fit-content;
   margin-bottom: 4rem;
-  max-width: 80rem;
-  margin-left: 0;
+  width: 100%;
 }
 .instructorImage {
   border: none;
@@ -13,7 +12,7 @@
   margin-right: 20px;
 }
 .intro {
-  color: RGB(106, 111, 115);
+  color: RGB(106, 111, 115) !important;
   font-size: 16px;
 }
 .name {

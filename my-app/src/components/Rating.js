@@ -2,6 +2,7 @@ import React from "react";
 
 function Rating(props) {
   const { include, rating } = props;
+  console.log(props);
   let x = parseFloat(rating);
   const val = x;
   x = x.toFixed(1);

@@ -1,17 +1,23 @@
 import React from "react";
 import Rating from "./Rating";
-
+import "../App.css";
 function Card(props) {
   console.log(props);
   return (
-    <div className="card">
-      <img src={props.course.image} className="course-img"></img>
-      <h3 className="course-title">{props.course.title}</h3>
-      <p className="">{props.course.instructor[0].name}</p>
-      <Rating inclued={1} rating={props.course.rating}></Rating>
-
-      <p className="price">{props.course.price}</p>
-    </div>
+    <a href={`/coursepage?filter=${props.course.id - 1}`}>
+      <div className="card" style={{ border: "none" }}>
+        <img src={props.course.image} className="course-img"></img>
+        <h3 className="course-title">{props.course.title}</h3>
+        <p
+          className="author"
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          {props.course.instructor[0].name}
+        </p>
+        <Rating include={true} rating={props.course.rate}></Rating>
+        <p className="price">E£ {props.course.price}</p>
+      </div>
+    </a>
   );
 }
 
