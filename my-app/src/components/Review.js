@@ -6,7 +6,6 @@ import Rating from "./Rating";
 import styles from "../styles/course/courseReview.css";
 function Review(props) {
   const { review } = props;
-  console.log(parseFloat(review.name.search(" ")));
   return (
     <React.Fragment>
       <div className="review">

@@ -2,7 +2,6 @@ import React from "react";
 
 function Goal(props) {
   const { goal } = props;
-  console.log(goal);
   return (
     <div
       className="objective"

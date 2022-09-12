@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/course/lecture.css";
 function Lecture(props) {
   const { lecture } = props;
-  console.log(lecture);
   return (
     <Accordion
       defaultActiveKey="0"

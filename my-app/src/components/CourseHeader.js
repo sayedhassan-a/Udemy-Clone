@@ -10,7 +10,6 @@ function CourseHeader() {
   const id = searchParams.get("filter");
   const courseDetails = data?.courses[id];
   const course = data?.courses[id];
-  console.log(data?.courses[id]);
   return (
     <React.Fragment>
       <div className="courseHeader">

@@ -27,6 +27,7 @@ export const DataContext = React.createContext();
 function App() {
   const [coursDetails, setData] = useState();
   const [filtered, setFilter] = useState();
+
   useEffect(() => {
     fetch("http://localhost:4000/data")
       .then((res) => {
@@ -39,20 +40,11 @@ function App() {
         }
       });
   }, []);
-  const search = (str) => {
-    let temp = coursDetails?.courses;
-    console.log(filtered);
-    setFilter(
-      temp?.filter((obj) => {
-        return obj.title.search(" " + str) != -1;
-      })
-    );
-  };
 
   return (
     <Router>
       <div className="App" style={{ margin: "0", padding: "0" }}>
-        <Nav handle={search}></Nav>
+        <Nav></Nav>
         <DataContext.Provider value={[coursDetails, filtered]}>
           <Switch>
             <Route path="/" element={<Home></Home>}></Route>

@@ -4,10 +4,11 @@ import { useContext } from "react";
 import { DataContext } from "../App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Spinner from "react-bootstrap/Spinner";
+import { QueryContext } from "./Home";
 function Content() {
   const [data, filtered] = useContext(DataContext);
-  console.log(data);
-  const view = filtered?.map((x) => <Card course={x}></Card>);
+  const filter = useContext(QueryContext);
+  const view = filter?.map((x) => <Card course={x}></Card>);
 
   if (data)
     return (

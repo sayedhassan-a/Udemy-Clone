@@ -69,7 +69,6 @@ function CourseDetails() {
                 setShow("more");
                 setHeight("250px");
               }
-              console.log(show);
             }}
           >
             Show {show}

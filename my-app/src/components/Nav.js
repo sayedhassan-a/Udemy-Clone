@@ -8,17 +8,14 @@ import {
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
-function Nav(props) {
-  const { handle } = props;
+function Nav() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchStr, setSearchStr] = useState();
   const navigate = useNavigate();
   const searcRef = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(searchStr);
-    handle(searcRef?.current.value);
-    navigate("/");
+    navigate("/?query=" + searcRef.current.value);
   };
   return (
     <nav class="pers-nav">

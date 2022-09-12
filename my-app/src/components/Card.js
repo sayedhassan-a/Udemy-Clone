@@ -31,10 +31,7 @@ function Card(props) {
       document.body.clientWidth
     ) {
       setLeft("left");
-      console.log("super");
     } else setLeft("right");
-    console.log(popupref.current?.getBoundingClientRect());
-    console.log(document.body.clientWidth);
   }, [document.body.clientWidth]);
   return (
     <div onMouseLeave={() => setShow("hidden")}>

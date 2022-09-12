@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../../styles/course/instructor.css";
 function Instructor(props) {
   const { instructor } = props;
-  console.log(props);
   return (
     <div className="instructor" style={{ width: "100%" }}>
       <div className="name">
