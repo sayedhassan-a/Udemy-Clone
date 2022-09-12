@@ -1,6 +1,6 @@
 import React from "react";
 import Instructor from "./course/Instructor";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import { DataContext } from "../App";
 import CoursePreview from "./coursePreview/CoursePreview";
 import styles from "../styles/course/coursePage.css";
@@ -18,15 +18,42 @@ function CourseDetails() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [show, setShow] = useState("more");
   const [h, setHeight] = useState("250px");
-
   const id = searchParams.get("filter");
   const course = data?.courses[id];
   const totalRate =
     course?.studentFeedback.reduce((pre, cur, ind) => {
       return parseInt(pre) + parseInt(cur) * (5 - ind);
     }, 0) / 100;
+  const headerRef = useRef();
+  const [headerHeight, setHeaderHeight] = useState(
+    headerRef.current?.getBoundingClientRect().height
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setHeaderHeight(headerRef.current?.getBoundingClientRect().height);
+    }
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+  useEffect(() => {
+    console.log(5);
+    setHeaderHeight(headerRef.current?.getBoundingClientRect().height);
+  });
   return (
     <React.Fragment>
+      <div
+        className="headerBackground"
+        ref={headerRef}
+        onCompositionStart={() =>
+          setHeaderHeight(headerRef.current?.getBoundingClientRect().height)
+        }
+      >
+        <CourseHeader courseIndex="id"></CourseHeader>
+      </div>
       <div
         className="d-flex flex-wrap"
         style={{
@@ -34,9 +61,11 @@ function CourseDetails() {
         }}
       >
         <div className="coursePage">
-          <div className="headerBackground">
-            <CourseHeader courseIndex="id"></CourseHeader>
-          </div>
+          <div
+            style={{
+              height: headerHeight,
+            }}
+          ></div>
           <Overview goalsList={course?.overview}></Overview>
           <LecturesList data={data}></LecturesList>
           <div className="requirements-body">
@@ -47,7 +76,7 @@ function CourseDetails() {
               })}
             </ul>
           </div>
-          <div className="description-body" style={{ height: h }}>
+          <div className="description-body">
             <div className="sectionHeader">Description</div>
             {course?.description.map((obj, ind) => {
               if (ind) return <p>{obj}</p>;

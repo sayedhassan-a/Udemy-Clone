@@ -3,15 +3,17 @@
     Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji,
     segoe ui emoji, segoe ui symbol;
   font-weight: 400;
-  line-height: 1.4;
-  font-size: 1.6rem;
-  color: #1c1d1f;
   width: 344px;
-  position: static;
   height: fit-content;
+
   padding: 0;
+  z-index: 9 !important;
 }
 
+.previewToHide {
+  margin-top: 100px;
+  position: relative;
+}
 .previewBody {
   z-index: 9;
   padding: 20px 18px;
