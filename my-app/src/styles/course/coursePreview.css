@@ -51,7 +51,7 @@
 .buy,
 .addToCart,
 .business-btn {
-  width: 100% !important;
+  width: 100%;
   font-size: 16px !important;
   font-weight: 700 !important;
   padding: 6px 6px !important;

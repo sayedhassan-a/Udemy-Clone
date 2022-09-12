@@ -52,12 +52,6 @@ function App() {
   return (
     <Router>
       <div className="App" style={{ margin: "0", padding: "0" }}>
-        {/*<DataContext.Provider value={[obj, courseDetails]}>
-        <Home />
-        
-        <HelloWorld val={coursDetails}></HelloWorld>
-        <button onClick={() => setData(2)}>asda</button>
-      </DataContext.Provider>*/}
         <Nav handle={search}></Nav>
         <DataContext.Provider value={[coursDetails, filtered]}>
           <Switch>
@@ -65,14 +59,6 @@ function App() {
             <Route path="/coursepage" element={<CourseDetails />}></Route>
           </Switch>
         </DataContext.Provider>
-
-        {/*
-
-<Lecture lecture={courseDetails.courses[0].content[0]}></Lecture>
-      <Overview GoalsList={courseDetails.courses[0].overview}></Overview>
-
-<Review review={courseDetails.courses[0].reviews[0]}></Review>
-*/}
       </div>
     </Router>
   );

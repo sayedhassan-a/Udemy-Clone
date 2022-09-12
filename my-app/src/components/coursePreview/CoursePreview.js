@@ -1,10 +1,13 @@
 import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../../App";
+import { useSearchParams } from "react-router-dom";
 import styles from "../../styles/course/coursePreview.css";
 function CoursePreview() {
   const [data, filtered] = useContext(DataContext);
-  const course = data?.courses[0];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const id = searchParams.get("filter");
+  const course = data?.courses[id];
   return (
     <React.Fragment>
       <div className="previewToHide">

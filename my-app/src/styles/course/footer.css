@@ -1,0 +1,139 @@
+.footer {
+  background-color: black;
+  padding: 20px 45px;
+  margin-bottom: 0;
+  padding-bottom: 80px;
+}
+.footer * {
+  margin: 0;
+}
+.footer-text {
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 700;
+  width: 380px;
+  margin-bottom: 20px;
+}
+.footer-text span {
+  color: RGB(206, 192, 252);
+}
+
+.footer-logo *:not(:first-child) {
+  margin-left: 20px;
+}
+
+.footer-links {
+  width: 58%;
+}
+.footer-links span {
+  color: white;
+  font-size: 14px;
+}
+.footer-links a {
+  width: 33.333%;
+  margin-bottom: 5px;
+}
+
+.lang-btn {
+  padding: 0 32px 0 12px;
+  color: white;
+  height: 33px;
+  background: transparent;
+  font-size: 16px;
+  border: white solid 1px;
+  margin-left: auto;
+}
+.lang-btn i {
+  width: fit-content;
+  font-size: 20px;
+  align-self: bottom;
+}
+.lang-btn div {
+  width: fit-content;
+  display: inline;
+  margin-right: 4px;
+}
+.rights {
+  padding: 60px 0 20px 0;
+}
+.rights div {
+  color: white;
+  font-size: 12px;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.footer-2nd-section {
+  display: inline-flex;
+}
+@media only screen and (max-width: 800px) {
+  .footer-text {
+    width: unset;
+  }
+  .footer-links {
+    width: unset;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .footer {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+  .footer-logo img {
+    height: 3rem;
+  }
+  .footer-logo *:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  .footer-links {
+    order: 1;
+  }
+  .udemy-light {
+    margin-bottom: 15px;
+  }
+  .footer-2nd-section {
+    flex-direction: column;
+  }
+  .lang-btn {
+    width: fit-content;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  .footer-links a {
+    width: fit-content;
+    margin-bottom: 15px;
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .footer-text {
+    font-size: 12px;
+  }
+  .footer-logo img {
+    height: 2.8rem;
+  }
+  .footer-links span {
+    font-size: 10px;
+  }
+  .footer-links a {
+    margin-bottom: 5px;
+  }
+  .rights {
+    padding-top: 15px;
+  }
+  .udemy-light {
+    width: 50px;
+    margin-bottom: 3px;
+  }
+  .rights div {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .footer-logo img {
+    height: 2.3rem;
+  }
+}

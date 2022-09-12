@@ -46,9 +46,11 @@
 .course-title,
 .price {
   margin: 0 !important;
-  border: black !important;
   font-size: 16px !important;
   font-weight: 700 !important;
+}
+.course-img {
+  border: gainsboro solid 1px;
 }
 .author {
   color: gray !important;
@@ -85,4 +87,95 @@
 a {
   color: inherit !important;
   text-decoration: none !important;
+}
+.popup-box {
+  position: relative;
+  border: 50px transparent;
+}
+
+.popup-border {
+  width: 350px;
+  background-color: white;
+  position: absolute;
+  border: black solid px;
+  box-sizing: content-box;
+  bottom: 0;
+  z-index: 8;
+  padding: 0;
+}
+
+.popup-border::after {
+  content: "";
+  position: absolute;
+  top: 250px;
+  margin-left: -5px;
+  border-width: 18px;
+  border-top-width: 8.5px;
+  border-bottom-width: 8.5px;
+  height: 1px;
+  width: 20px;
+  border-style: solid;
+  z-index: 8;
+}
+.popup {
+  border: gainsboro solid 1px;
+  padding: 20px;
+}
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 250px;
+  z-index: 9;
+  margin-left: -5px;
+  border-width: 17px;
+  border-top-width: 8px;
+  border-bottom-width: 8px;
+  height: 1px;
+  width: 20px;
+  border-style: solid;
+  z-index: 9;
+}
+.left.popup::after {
+  right: -33px;
+  border-color: transparent transparent transparent white;
+}
+.left.popup-border::after {
+  right: -36px;
+  border-color: transparent transparent transparent gainsboro;
+}
+.popup-border.left {
+  right: 107%;
+}
+.right.popup::after {
+  left: -28px;
+  border-color: transparent white transparent transparent;
+}
+.right.popup-border::after {
+  left: -30px;
+  border-color: transparent gainsboro transparent transparent;
+}
+.popup-border.right {
+  left: 107%;
+}
+.heart-box {
+  border: black solid 1px;
+  width: fit-content;
+  display: inline-block;
+  padding: 13px;
+  border-radius: 100%;
+  margin-left: 20px;
+}
+
+.heart-box i {
+  font-size: 22px;
+  width: fit-content;
+}
+
+.popup-hours {
+  font-size: 12px !important;
+  color: RGB(106, 111, 115);
+}
+.popup-date {
+  font-size: 12px !important;
+  color: RGB(30, 96, 85) !important;
 }

@@ -18,14 +18,14 @@ function Nav(props) {
     event.preventDefault();
     console.log(searchStr);
     handle(searcRef?.current.value);
-    navigate("/?filter=" + searcRef?.current.value);
+    navigate("/");
   };
   return (
     <nav class="pers-nav">
       <span class="fa fa-bars" id="bar"></span>
       <span class="pers-navitem pers-site">
         <a href="/">
-          <img src={logoBlack} alt="logo" id="logo" />
+          <img src={logoBlack} alt="logo" class="nav-logo" />
         </a>
       </span>
       <span class="pers-navitem pers-cat">Categories</span>
