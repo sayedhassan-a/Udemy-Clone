@@ -1,0 +1,78 @@
+.review {
+  width: fit-content;
+  text-align: left;
+
+  display: inline-flex;
+  gap: 2.5rem;
+  margin-left: 0;
+  margin-bottom: 3rem;
+}
+.avatar {
+  background: #1c1d1f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 120%;
+  object-fit: cover;
+  color: #fff;
+  width: 4.8rem;
+  height: 4.8rem;
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 1.6rem;
+}
+.reviewContent {
+  max-width: 80rem;
+  display: inline-block;
+}
+.reviewBody {
+  width: 100%;
+}
+.name {
+  font-family: udemy sans, -apple-system, BlinkMacSystemFont, Roboto, segoe ui,
+    Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 1.6rem;
+}
+.user {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.pers-rate {
+  color: #e59819;
+}
+
+.content {
+  padding: 0 10px;
+}
+.comment {
+  font-size: 14px;
+}
+.icon {
+  border: black solid 1px;
+  width: fit-content;
+  display: inline;
+  padding: 10px;
+  border-radius: 100%;
+}
+.like {
+  margin-right: 10px;
+}
+.dislike {
+  margin-right: 20px;
+}
+.report {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .avatar {
+    display: none;
+  }
+}

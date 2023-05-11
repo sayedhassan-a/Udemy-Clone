@@ -1,0 +1,26 @@
+.pb {
+  background-color: gainsboro;
+  padding: 0;
+  width: calc(100% - 150px);
+  display: inline-flex;
+  margin-right: 20px;
+  align-self: flex-start;
+}
+.pr {
+  background-color: grey;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.empty-part {
+  width: auto;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+.pr-num {
+  color: blue;
+  font-size: 12px;
+}

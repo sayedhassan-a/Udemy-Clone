@@ -1,0 +1,66 @@
+.coursePage {
+  padding: auto;
+}
+.coursePage :not(.headerBackground) {
+  max-width: 80rem;
+}
+.headerBackground {
+  width: 100% !important;
+  background-color: black;
+  position: absolute;
+}
+
+.overviewBody,
+.reviewBody,
+.instructorBody,
+.overviewOuter,
+.lectureBody,
+.progress-body,
+.requirements-body,
+.description-body {
+  padding: 30px !important;
+  box-sizing: border-box;
+  max-width: "80rem";
+}
+.show-more {
+  background-color: transparent;
+  padding: 0;
+  margin-left: 30px;
+  font-size: 14px;
+  color: RGB(64, 27, 156);
+  font-weight: 700;
+  border: none;
+  margin-top: 10px;
+}
+.requirements-body,
+.description-body {
+  padding-top: 0px !important;
+  padding-bottom: 15px !important;
+}
+.description-body {
+  overflow: hidden;
+}
+.progress-rate {
+  color: RGB(180, 105, 14);
+  font-weight: 700;
+  text-align: center;
+  font-size: 15px;
+  margin-right: 20px;
+}
+.progress-rate * {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.progress-rate-num {
+  font-size: 50px;
+}
+
+.requirements-body li {
+  font-size: 14px;
+}
+
+.description-body p {
+  font-size: 14px;
+}

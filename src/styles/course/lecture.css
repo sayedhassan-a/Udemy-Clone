@@ -1,0 +1,32 @@
+.lecture {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 0;
+  color: black;
+  position: absolute;
+  right: 5.2rem;
+  transform: rotateY(180deg);
+}
+.lesson {
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+}
+.accordion-header,
+.accordion-button,
+.collapsed {
+  background-color: RGB(247, 249, 250) !important;
+}
+.accordion-button {
+  transform: rotateY(-180deg);
+  padding: 2.4rem;
+}
+.accordion {
+  max-width: 80rem;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: fit-content;
+}

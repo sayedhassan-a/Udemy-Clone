@@ -1,0 +1,79 @@
+.courseHeader {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  width: 80% !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 80rem;
+  margin-left: 10%;
+}
+
+.pers-rate-num,
+.pers-rate {
+  color: RGB(243, 202, 140);
+  font-size: 14px;
+  font-weight: 700;
+}
+.ratingCount,
+.author {
+  color: RGB(206, 192, 252) !important;
+  text-decoration: underline;
+  margin-right: 10px !important;
+}
+.heading {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.path {
+  color: RGB(206, 192, 252);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.lastUpdate,
+.lang,
+.subs {
+  font-size: 14px;
+}
+
+.date-lang div {
+  display: inline-block;
+  margin-right: 20px;
+}
+.date-lang i,
+.date-lang span {
+  margin-right: 5px;
+}
+
+.courseDesc {
+  font-size: 19px;
+}
+
+.headerImg {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .date-lang div {
+    display: block;
+    margin-right: 20px;
+  }
+  .headerImg {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .headerImg {
+    width: 100%;
+    margin: auto;
+  }
+}
