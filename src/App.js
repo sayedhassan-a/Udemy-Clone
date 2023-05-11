@@ -29,7 +29,7 @@ function App() {
   const [filtered, setFilter] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:4000/data")
+    fetch("http://localhost:5000/data")
       .then((res) => {
         return res.json();
       })
